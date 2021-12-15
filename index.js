@@ -27,7 +27,7 @@ app.use(helmet());
 app.use(express.json());
 
 // Check Environment
-const PORT = 8000 || process.env.PORT;
+const PORT = process.env.PORT || 8000;
 
 connection();
 
