@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const { connection } = require("./db/connection");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const produksi_susu = require("./routes/api/produksi_susu");
@@ -25,6 +26,8 @@ app.use(morgan("tiny"));
 app.use(helmet());
 app.use(express.json());
 
+connection();
+
 app.use("/api/v1/produksi_susu", produksi_susu);
 app.use("/api/v1/produksi_pupuk", produksi_pupuk);
 app.use("/api/v1/jenis_susu", jenis_susu);
@@ -45,6 +48,8 @@ app.use("/api/v1/pengeluaran", pengeluaran);
 app.use(notFound);
 app.use(errorHandlers);
 
-app.listen(process.env.PORT, () =>
+const port = process.env.PORT || 8000;
+
+app.listen(port, () =>
   console.log(`Server running on ${port}, http://localhost:${port}`)
 );
