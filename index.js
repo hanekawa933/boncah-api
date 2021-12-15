@@ -26,9 +26,6 @@ app.use(morgan("tiny"));
 app.use(helmet());
 app.use(express.json());
 
-// Check Environment
-const PORT = process.env.PORT || 8000;
-
 connection();
 
 app.use("/api/v1/produksi_susu", produksi_susu);
@@ -51,6 +48,8 @@ app.use("/api/v1/pengeluaran", pengeluaran);
 app.use(notFound);
 app.use(errorHandlers);
 
-app.listen(PORT, () => {
-  console.log(`Server started on PORT ${PORT}`);
-});
+const port = process.env.PORT || 8000;
+
+app.listen(port, () =>
+  console.log(`Server running on ${port}, http://localhost:${port}`)
+);
