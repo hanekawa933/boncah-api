@@ -1,0 +1,36 @@
+{
+  "name": "bonchas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index",
+    "client": "cd ./client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "db:migrate": "npx sequelize-cli db:migrate",
+    "db:undo:migrate": "npx sequelize-cli db:migrate:undo:all",
+    "db:seed": "npx sequelize-cli db:seed:all",
+    "db:undo:seed:all": "npx sequelize-cli db:seed:undo:all"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.5",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.12",
+    "sequelize-cli": "^6.2.0"
+  }
+}

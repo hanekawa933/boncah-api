@@ -1,0 +1,56 @@
+[
+  {
+    "tanggal_peminjaman": "06/05/2021",
+    "keterangan": "Meminjam uang untuk membeli makan",
+    "pinjaman": 55000,
+    "pegawai_id": 1
+  },
+  {
+    "tanggal_peminjaman": "06/09/2021",
+    "keterangan": "Meminjam uang untuk membeli makan",
+    "pinjaman": 55000,
+    "pegawai_id": 1
+  },
+  {
+    "tanggal_peminjaman": "06/05/2021",
+    "keterangan": "Meminjam uang untuk membeli makan",
+    "pinjaman": 50000,
+    "pegawai_id": 4
+  },
+  {
+    "tanggal_peminjaman": "06/10/2021",
+    "keterangan": "Meminjam uang untuk membeli makan",
+    "pinjaman": 50000,
+    "pegawai_id": 4
+  },
+  {
+    "tanggal_peminjaman": "06/05/2021",
+    "keterangan": "Meminjam uang untuk membeli makan",
+    "pinjaman": 500000,
+    "pegawai_id": 5
+  },
+  {
+    "tanggal_peminjaman": "06/05/2021",
+    "keterangan": "Meminjam uang untuk membeli makan",
+    "pinjaman": 152000,
+    "pegawai_id": 5
+  },
+  {
+    "tanggal_peminjaman": "06/05/2021",
+    "keterangan": "Meminjam uang untuk membeli makan",
+    "pinjaman": 50000,
+    "pegawai_id": 6
+  },
+  {
+    "tanggal_peminjaman": "06/05/2021",
+    "keterangan": "Meminjam uang untuk membeli baju sekolah",
+    "pinjaman": 425000,
+    "pegawai_id": 10
+  },
+  {
+    "tanggal_peminjaman": "06/05/2021",
+    "keterangan": "Meminjam uang untuk membeli makan",
+    "pinjaman": 20000,
+    "pegawai_id": 11
+  }
+]

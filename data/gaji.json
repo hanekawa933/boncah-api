@@ -1,0 +1,79 @@
+[
+  {
+    "gaji": 2024000,
+    "lembur": 230000,
+    "tanggal": "06/30/2021",
+    "keterangan": "Makan 24 Hari dann libur 3 hari.",
+    "pegawai_id": 1
+  },
+  {
+    "gaji": 3500000,
+    "lembur": 300000,
+    "tanggal": "06/30/2021",
+    "keterangan": "Makan 1 Bulan, lembur 1 hari.",
+    "pegawai_id": 2
+  },
+  {
+    "gaji": 1500000,
+    "lembur": 300000,
+    "tanggal": "06/30/2021",
+    "keterangan": "Makan 1 Bulan, Lembur 1 hari.",
+    "pegawai_id": 3
+  },
+  {
+    "gaji": 1700000,
+    "lembur": 430000,
+    "tanggal": "06/30/2021",
+    "keterangan": "Makan 1 Bulan, Lembur 2 hari.",
+    "pegawai_id": 4
+  },
+  {
+    "gaji": 1700000,
+    "lembur": 430000,
+    "tanggal": "06/30/2021",
+    "keterangan": "Makan 1 Bulan, Lembur 2 hari.",
+    "pegawai_id": 5
+  },
+  {
+    "gaji": 1500000,
+    "lembur": 357000,
+    "tanggal": "06/30/2021",
+    "keterangan": "Kerja 20 hari.",
+    "pegawai_id": 6
+  },
+  {
+    "gaji": 1500000,
+    "lembur": 300000,
+    "tanggal": "06/30/2021",
+    "keterangan": "Uang Kerja selama 24 hari, Lembur 2 hari.",
+    "pegawai_id": 7
+  },
+  {
+    "gaji": 3500000,
+    "lembur": 300000,
+    "tanggal": "06/30/2021",
+    "keterangan": "Makan 1 Bulan.",
+    "pegawai_id": 8
+  },
+  {
+    "gaji": 1400000,
+    "lembur": 408000,
+    "tanggal": "06/30/2021",
+    "keterangan": "Makan 1 Bulan, Lembur 4 hari.",
+    "pegawai_id": 9
+  },
+  {
+    "gaji": 2000000,
+    "lembur": 608000,
+    "tanggal": "06/30/2021",
+    "keterangan": "9 Hari Kerja, Makan 9 hari.",
+    "pegawai_id": 10
+  },
+  {
+    "gaji": 193000,
+    "lembur": 20000,
+    "tanggal": "06/30/2021",
+    "keterangan": "2 hari Kerja, Makan 2 hari.",
+    "pegawai_id": 11
+  }
+]

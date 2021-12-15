@@ -1,0 +1,191 @@
+get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\34\048\2021" -filter "*-066.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\Nama Kementerian Lembaga\066"
+get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\34\152\2021" -filter "*-066.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\Nama Kementerian Lembaga\066"
+get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\34\185\2021" -filter "*-066.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\Nama Kementerian Lembaga\066"
+get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\30\085\2021" -filter "*-066.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\Nama Kementerian Lembaga\066"
+get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\30\113\2021" -filter "*-066.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\Nama Kementerian Lembaga\066"
+get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\30\138\2021" -filter "*-066.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\Nama Kementerian Lembaga\066"
+get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\30\141\2021" -filter "*-066.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\Nama Kementerian Lembaga\066"
+get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\23\170\2021" -filter "*-066.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\Nama Kementerian Lembaga\066"
+get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\23\177\2021" -filter "*-066.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\Nama Kementerian Lembaga\066"
+
+
+
+
+$provinsi = '01'
+$folder = '012'
+
+$Lem1 = @('001', '002', '003', '074', '089', '105', '122')
+$Lem2 = @('004', '005', '006', '007', '075', '076', '106', '119', '123', '124', '125')
+$Lem3 = @('010', '011', '077', '090', '091', '142')
+$Lem4 = @('008','092','120')
+$Lem5 = @('012','013','078','143','159')
+$Lem6 = @('014','070','109','144','160')
+$Lem7 = @('017','116','126','145')
+$Lem8 = @('016','121','146','181')
+$Lem9 = @('015','107')
+$Lem10 = @('020','127','161')
+$Lem11 = @('018','019','088','133','139','140','175','182')
+$Lem12 = @('021','022','023','024','025','086','087','095','096','128','147','171')
+$Lem13 = @('026','027','028','029','072','097','115','118','129','130','134','148','162','163','164')
+$Lem14 = @('030','149','176')
+$Lem15 = @('031','032','033','034','035','036','073','098','099','100','131','135', '150','165','166')
+$Lem16 = @('042','079','093','094','117','167')
+$Lem17 = @('043','044','080','102')
+$Lem18 = @('045','081','110','151','168')
+$Lem19 = @('046','047','153')
+$Lem20 = @('037','132','154')
+$Lem21 = @('038','071','101','169')
+$Lem22 = @('039','040','041','111','172','174')
+$Lem23 = @('054','055','056','057','058','136', '155','170','177')
+$Lem24 = @('051','052','053','082')
+$Lem25 = @('060','103','156','157')
+$Lem26 = @('050','180')
+$Lem27 = @('049','083','158','179')
+$Lem28 = @('062','112')
+$Lem29 = @('061','084','104','173')
+$Lem30 = @('063','064','068','085','113','138','141')
+$Lem31 = @('009','137')
+$Lem32 = @('059','178')
+$Lem33 = @('065','066','067')
+$Lem34 = @('048','152','185')
+
+foreach($i in $Lem1 ){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\01\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem2){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\02\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem3){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\03\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem4 ){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\04\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem5){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\05\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem6){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\06\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem7 ){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\07\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem8){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\08\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem9){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\09\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem10 ){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\10\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem11){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\11\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem12){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\12\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem13 ){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\13\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem14){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\14\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem15){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\15\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem16 ){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\16\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem17){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\17\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem18){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\18\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem19 ){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\19\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem20){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\20\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem21){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\21\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem22 ){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\22\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem23){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\23\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem24){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\24\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem25 ){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\25\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem26){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\26\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem27){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\27\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem28){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\28\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem29){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\29\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem30){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\30\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem31){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\31\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem32){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\32\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem33){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\33\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+foreach($i in $Lem34){
+    get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\34\$i\2021" -filter "*-$folder.*" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$folder"
+}
+
+
+$file = '012'
+$cari = '01'
+get-childitem -Recurse -path "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$file" -filter "*562103*.pdf" | move-item -Destination "C:\Users\Eki-PC\Documents\Magang Mandiri\DIPA 34 Provinsi\$file\Dupl"

@@ -1,0 +1,146 @@
+"use strict";
+const {
+  primaryKey,
+  notNullString,
+  nullableString,
+  notNullInteger,
+  notNullDecimal,
+  nullableInteger,
+  notNullDate,
+  notNullText,
+  PKCascade,
+  foreignKey,
+} = require("../utils/dbMigrationObject");
+
+module.exports = {
+  up: async (queryInterface, Sequelize) => {
+    try {
+      return await Promise.all([
+        queryInterface.createTable("pegawai", {
+          id: primaryKey(),
+          username: notNullString(16),
+          phone_number: notNullInteger(),
+          email: notNullString(255),
+          password: notNullString(255),
+        }),
+
+        queryInterface.createTable("kambing", {
+          id: primaryKey(),
+          kambing: notNullInteger(),
+          betina: notNullInteger(),
+          jantan: notNullInteger(),
+          createdAt: notNullDate(),
+          updatedAt: notNullDate(),
+        }),
+
+        queryInterface.createTable("jenis_susu", {
+          id: primaryKey(),
+          jenis_susu: notNullString(50),
+          createdAt: notNullDate(),
+          updatedAt: notNullDate(),
+        }),
+
+        queryInterface.createTable("susu_original", {
+          id: primaryKey(),
+          liter: notNullDecimal(12, 3),
+          tanggal: notNullDate(),
+          createdAt: notNullDate(),
+          updatedAt: notNullDate(),
+        }),
+
+        queryInterface.createTable("susu_olahan", {
+          id: primaryKey(),
+          id_jenis_susu: foreignKey("jenis_susu"),
+          jumlah_liter: notNullDecimal(12, 3),
+          tanggal: notNullDate(),
+          createdAt: notNullDate(),
+          updatedAt: notNullDate(),
+        }),
+
+        queryInterface.createTable("harga_susu", {
+          id: primaryKey(),
+          id_jenis_susu: foreignKey("jenis_susu"),
+          harga: notNullDecimal(15, 3),
+          createdAt: notNullDate(),
+          updatedAt: notNullDate(),
+        }),
+
+        queryInterface.createTable("penjualan", {
+          id: primaryKey(),
+          id_jenis_susu: foreignKey("jenis_susu"),
+          date: notNullDate(),
+          hasil_terjual: notNullDecimal(15, 2),
+          liter_terjual: notNullDecimal(12, 3),
+          createdAt: notNullDate(),
+          updatedAt: notNullDate(),
+        }),
+
+        queryInterface.createTable("laporan", {
+          id: primaryKey(),
+          pesan: notNullText(),
+          date: notNullDate(),
+          created_by: foreignKey("pegawai"),
+          createdAt: notNullDate(),
+          updatedAt: notNullDate(),
+        }),
+
+        queryInterface.createTable("stock_susu", {
+          id: primaryKey(),
+          jumlah_liter: notNullDecimal(12, 3),
+          createdAt: notNullDate(),
+          updatedAt: notNullDate(),
+        }),
+
+        queryInterface.createTable("stock_susu_olahan", {
+          id: primaryKey(),
+          jumlah_liter: notNullDecimal(12, 3),
+          id_jenis_susu: foreignKey("jenis_susu"),
+          createdAt: notNullDate(),
+          updatedAt: notNullDate(),
+        }),
+
+        queryInterface.createTable("penghasilan", {
+          id: primaryKey(),
+          kas_penghasilan: notNullDecimal(15, 2),
+          createdAt: notNullDate(),
+          updatedAt: notNullDate(),
+        }),
+
+        queryInterface.createTable("pengeluaran", {
+          id: primaryKey(),
+          pengeluaran: notNullDecimal(15, 2),
+          pesan: notNullText(),
+          date: notNullDate(),
+        }),
+      ]);
+    } catch (error) {
+      console.log(error);
+    }
+  },
+  down: async (queryInterface, Sequelize) => {
+    const table = [
+      "kambing",
+      "susu_original",
+      "susu_olahan",
+      "harga_susu",
+      "penjualan",
+      "laporan",
+      "stock_susu",
+      "stock_susu_olahan",
+      "penghasilan",
+      "pengeluaran",
+      "jenis_susu",
+      "pegawai",
+    ];
+
+    try {
+      return await Promise.all([
+        table.forEach((item) => {
+          queryInterface.dropTable(item);
+        }),
+      ]);
+    } catch (error) {
+      console.log(error);
+    }
+  },
+};
