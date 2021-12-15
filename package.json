@@ -7,14 +7,7 @@
     "node": "14.x"
   },
   "scripts": {
-    "start": "node index.js",
-    "server": "nodemon index",
-    "client": "cd ./client && npm start",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "db:migrate": "npx sequelize-cli db:migrate",
-    "db:undo:migrate": "npx sequelize-cli db:migrate:undo:all",
-    "db:seed": "npx sequelize-cli db:seed:all",
-    "db:undo:seed:all": "npx sequelize-cli db:seed:undo:all"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
