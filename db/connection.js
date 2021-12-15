@@ -5,6 +5,7 @@ const options = {
   define: {
     freezeTableName: true,
   },
+  dialectModule: require("pg"),
   dialectOptions: {
     dateStrings: true,
     typeCast: function (field, next) {
