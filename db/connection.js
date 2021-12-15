@@ -1,6 +1,6 @@
 const { Sequelize } = require("sequelize");
-
-const dbConf = require("../config/config.json")["development"];
+const env = process.env.NODE_ENV || "development";
+const dbConf = require("../config/config.json")[env];
 const options = {
   define: {
     freezeTableName: true,
