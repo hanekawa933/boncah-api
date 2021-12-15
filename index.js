@@ -26,6 +26,7 @@ app.use(morgan("tiny"));
 app.use(helmet());
 app.use(express.json());
 
+// Check Environment
 const PORT = 8000 || process.env.PORT;
 
 connection();
