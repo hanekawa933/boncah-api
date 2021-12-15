@@ -27,7 +27,7 @@ const Keterangan_Pemerahan = require("./keterangan_pemerahan");
 const Waktu_Pemerahan = require("./waktu_pemerahan");
 const Kandang = require("./kandang");
 const User = require("./user");
-const Kategori_Pengeluaran = require("./kategori_kontol");
+const Kategori_Pengeluaran = require("./kategori_pengeluaran");
 
 Jenis_Susu.hasMany(Produksi_Susu, {
   foreignKey: "jenis_susu_id",
