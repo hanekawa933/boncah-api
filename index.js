@@ -22,6 +22,7 @@ const pengeluaran = require("./routes/api/pengeluaran");
 
 const { notFound, errorHandlers } = require("./middleware/errorMessage");
 
+app.use(cors());
 app.use(morgan("tiny"));
 app.use(helmet());
 app.use(express.json());
