@@ -23,7 +23,11 @@ const cors = require("cors");
 
 const { notFound, errorHandlers } = require("./middleware/errorMessage");
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
 app.use(morgan("tiny"));
 app.use(helmet());
 app.use(express.json());
