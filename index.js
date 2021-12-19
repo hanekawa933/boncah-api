@@ -19,6 +19,7 @@ const pupuk = require("./routes/api/pupuk");
 const penjualan = require("./routes/api/penjualan");
 const user = require("./routes/api/user");
 const pengeluaran = require("./routes/api/pengeluaran");
+const cors = require("cors");
 
 const { notFound, errorHandlers } = require("./middleware/errorMessage");
 
