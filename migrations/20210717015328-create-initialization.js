@@ -20,6 +20,8 @@ module.exports = {
           id: primaryKey(),
           username: notNullString(20),
           password: notNullString(255),
+          nama_lengkap: notNullString(255),
+          is_admin: notNullInteger(),
           createdAt: notNullDate(),
           updatedAt: notNullDate(),
         }),

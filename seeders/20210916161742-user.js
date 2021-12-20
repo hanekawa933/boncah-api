@@ -19,6 +19,14 @@ module.exports = {
       {
         username: "admin",
         password: encrypted,
+        nama_lengkap: "Administrator",
+        is_admin: 1,
+      },
+      {
+        username: "bukan_admin",
+        password: encrypted,
+        nama_lengkap: "Pencatat",
+        is_admin: 2,
       },
     ]);
   },

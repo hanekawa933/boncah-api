@@ -381,8 +381,8 @@ const getAllPenjualanUntillToday = async (req, res, next) => {
     res.status(200).send({
       statusCode: res.statusCode,
       msg: "Successfully get data penjualan susu",
-      data,
-      data2,
+      data: isNaN(data) ? 0 : data,
+      data2: isNaN(data2) ? 0 : data2,
     });
   } catch (error) {
     next(error);
@@ -617,7 +617,7 @@ const getPenjualanBasedOnQuery = async (req, res, next) => {
       res.status(200).send({
         statusCode: res.statusCode,
         msg: "Successfully get data penjualan susu",
-        data,
+        data: isNaN(data) ? 0 : data,
       });
     } else if (search === "prev_month") {
       const data = await Penjualan_Susu.findAll({
@@ -642,7 +642,7 @@ const getPenjualanBasedOnQuery = async (req, res, next) => {
       res.status(200).send({
         statusCode: res.statusCode,
         msg: "Successfully get data penjualan susu",
-        data,
+        data: isNaN(data) ? 0 : data,
       });
     } else if (search === "today") {
       const data = await Penjualan_Susu.findAll({
@@ -671,7 +671,7 @@ const getPenjualanBasedOnQuery = async (req, res, next) => {
       res.status(200).send({
         statusCode: res.statusCode,
         msg: "Successfully get data penjualan susu",
-        data,
+        data: isNaN(data) ? 0 : data,
       });
     } else if (search === "this_week") {
       const data = await Penjualan_Susu.findAll({
@@ -686,7 +686,7 @@ const getPenjualanBasedOnQuery = async (req, res, next) => {
       res.status(200).send({
         statusCode: res.statusCode,
         msg: "Successfully get data penjualan susu",
-        data,
+        data: isNaN(data) ? 0 : data,
       });
     } else if (search === "custom") {
       if (year === undefined || month === undefined || date === undefined) {
@@ -719,7 +719,7 @@ const getPenjualanBasedOnQuery = async (req, res, next) => {
         res.status(200).send({
           statusCode: res.statusCode,
           msg: "Successfully get data penjualan susu",
-          data,
+          data: isNaN(data) ? 0 : data,
         });
       }
     } else if (search === "all") {
@@ -733,7 +733,7 @@ const getPenjualanBasedOnQuery = async (req, res, next) => {
       res.status(200).send({
         statusCode: res.statusCode,
         msg: "Successfully get data penjualan susu",
-        data,
+        data: isNaN(data) ? 0 : data,
       });
     } else {
       res.status(404);
@@ -801,9 +801,9 @@ const getPenjualanSumBasedOnQuery = async (req, res, next) => {
       res.status(200).send({
         statusCode: res.statusCode,
         msg: "Successfully get data penjualan susu",
-        data,
-        data2,
-        data3,
+        data: isNaN(data) ? 0 : data,
+        data2: isNaN(data2) ? 0 : data2,
+        data3: isNaN(data3) ? 0 : data3,
       });
     } else if (search === "prev_month") {
       const data = await Penjualan_Susu.sum("jumlah_terjual_paket", {
@@ -853,9 +853,9 @@ const getPenjualanSumBasedOnQuery = async (req, res, next) => {
       res.status(200).send({
         statusCode: res.statusCode,
         msg: "Successfully get data penjualan susu",
-        data,
-        data2,
-        data3,
+        data: isNaN(data) ? 0 : data,
+        data2: isNaN(data2) ? 0 : data2,
+        data3: isNaN(data3) ? 0 : data3,
       });
     } else if (search === "today") {
       const data = await Penjualan_Susu.sum("jumlah_terjual_paket", {
@@ -917,9 +917,9 @@ const getPenjualanSumBasedOnQuery = async (req, res, next) => {
       res.status(200).send({
         statusCode: res.statusCode,
         msg: "Successfully get data penjualan susu",
-        data,
-        data2,
-        data3,
+        data: isNaN(data) ? 0 : data,
+        data2: isNaN(data2) ? 0 : data2,
+        data3: isNaN(data3) ? 0 : data3,
       });
     } else if (search === "this_week") {
       const data = await Penjualan_Susu.sum("jumlah_terjual_paket", {
@@ -945,9 +945,9 @@ const getPenjualanSumBasedOnQuery = async (req, res, next) => {
       res.status(200).send({
         statusCode: res.statusCode,
         msg: "Successfully get data penjualan susu",
-        data,
-        data2,
-        data3,
+        data: isNaN(data) ? 0 : data,
+        data2: isNaN(data2) ? 0 : data2,
+        data3: isNaN(data3) ? 0 : data3,
       });
     } else if (search === "custom") {
       if (year === undefined && month === undefined && date === undefined) {
@@ -1005,9 +1005,9 @@ const getPenjualanSumBasedOnQuery = async (req, res, next) => {
         res.status(200).send({
           statusCode: res.statusCode,
           msg: "Successfully get data penjualan susu",
-          data,
-          data2,
-          data3,
+          data: isNaN(data) ? 0 : data,
+          data2: isNaN(data2) ? 0 : data2,
+          data3: isNaN(data3) ? 0 : data3,
         });
       } else if (
         year !== undefined &&
@@ -1049,9 +1049,9 @@ const getPenjualanSumBasedOnQuery = async (req, res, next) => {
         res.status(200).send({
           statusCode: res.statusCode,
           msg: "Successfully get data penjualan susu",
-          data,
-          data2,
-          data3,
+          data: isNaN(data) ? 0 : data,
+          data2: isNaN(data2) ? 0 : data2,
+          data3: isNaN(data3) ? 0 : data3,
         });
       } else {
         const data = await Penjualan_Susu.sum("jumlah_terjual_paket", {
@@ -1113,9 +1113,9 @@ const getPenjualanSumBasedOnQuery = async (req, res, next) => {
         res.status(200).send({
           statusCode: res.statusCode,
           msg: "Successfully get data penjualan susu",
-          data,
-          data2,
-          data3,
+          data: isNaN(data) ? 0 : data,
+          data2: isNaN(data2) ? 0 : data2,
+          data3: isNaN(data3) ? 0 : data3,
         });
       }
     } else if (search === "all") {
@@ -1128,9 +1128,9 @@ const getPenjualanSumBasedOnQuery = async (req, res, next) => {
       res.status(200).send({
         statusCode: res.statusCode,
         msg: "Successfully get data penjualan susu",
-        data,
-        data2,
-        data3,
+        data: isNaN(data) ? 0 : data,
+        data2: isNaN(data2) ? 0 : data2,
+        data3: isNaN(data3) ? 0 : data3,
       });
     } else {
       res.status(404);

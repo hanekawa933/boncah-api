@@ -5,7 +5,7 @@ const { Op } = require("sequelize");
 
 const getDataKeterangan = async (req, res, next) => {
   try {
-    const keterangan = await Keterangan_Pemerahan.findAll({ limit: 2 });
+    const keterangan = await Keterangan_Pemerahan.findAll();
 
     res.status(200).send({
       statusCode: res.status,
